@@ -25,25 +25,19 @@ function Generator(props) {
     const b = 255;
 
     setColor(
-      `rgb(${randomUtility(r)},${randomUtility(g)},${randomUtility(b)})`
+      `rgb(${randomUtility(r)}, ${randomUtility(g)}, ${randomUtility(b)})`
     );
   };
 
   useEffect(() => {
-    if (typeOfColor === "hex") handleRandomHexColor();
-    else handleRandomRgbColor();
+    typeOfColor === "hex" ? handleRandomHexColor() : handleRandomRgbColor();
   }, [typeOfColor]);
 
   return (
-    <div
-      className="container"
-      style={{
-        background: color,
-      }}
-    >
+    <div className="container" style={{ background: color }}>
       <div className="buttons">
-        <button onClick={() => setTypeOfColor("hex")}>Create Hex color</button>
-        <button onClick={() => setTypeOfColor("rgb")}>Create Rgb color</button>
+        <button onClick={() => setTypeOfColor("hex")}>Create Hex Color</button>
+        <button onClick={() => setTypeOfColor("rgb")}>Create Rgb Color</button>
         <button
           onClick={
             typeOfColor === "hex"
@@ -51,11 +45,11 @@ function Generator(props) {
               : () => handleRandomRgbColor()
           }
         >
-          Random color
+          Random Color
         </button>
       </div>
       <div className="text">
-        <p>{typeOfColor === "hex" ? "Hex Color" : "Rgb color"}</p>
+        <p>{typeOfColor === "hex" ? "Hex Color" : "Rgb Color"}</p>
         <p>{color}</p>
       </div>
     </div>
