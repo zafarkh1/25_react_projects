@@ -1,0 +1,25 @@
+.star-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.star-rating .fa-star {
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.star-rating .fa-star.active {
+  color: #ffd700;
+  transform: scale(1.2);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.star-rating .fa-star.inactive {
+  color: #ddd;
+}
+
+.star-rating .fa-star:hover {
+  transform: scale(1.3);
+}
