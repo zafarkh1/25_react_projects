@@ -1,7 +1,7 @@
+import LoadMoreProduct from "./component/loadMoreProduct";
+
 function App() {
-  return (
-    <></>
-  );
+  return <LoadMoreProduct />;
 }
 
 export default App;
